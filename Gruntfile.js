@@ -21,6 +21,11 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      target: {
+        files: {
+          'public/client/allFiles.min.js' : ['public/client/app.js', 'public/client/createLinkView.js', 'public/client/link.js', 'public/client/linksView.js', 'public/client/linkView.js', 'public/client/router.js']
+        }
+      }
     },
 
     jshint: {

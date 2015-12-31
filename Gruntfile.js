@@ -120,8 +120,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', [
     // add your deploy tasks here
-    grunt.task.run(["build"])
-  ]);
+    "build"]
+  );
 
 
 };

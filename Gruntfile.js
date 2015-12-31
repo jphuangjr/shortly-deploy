@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
         dist: {
-        src: ['public/*/*.js', 'app/*/*.js', 'lib/*.js', 'server-config.js', 'server.js'],
+        src: ['public/**/*.js', 'app/**/*.js', 'lib/*.js', 'server-config.js', 'server.js'],
         dest: 'prod/allFiles.js'
       } 
     },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     uglify: {
       target: {
         files: {
-          'prod/allFiles.min.js' : ['public/*/*.js', 'app/*/*.js', 'lib/*/*.js', 'test/*/*.js', 'server-config.js', 'server.js']
+          'prod/allFiles.min.js' : ['public/**/*.js', 'app/**/*.js', 'lib/**/*.js', 'test/**/*.js', 'server-config.js', 'server.js']
         }
       }
     },

@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     uglify: {
       target: {
         files: {
-          'prod/allFiles.min.js' : ['public/**/*.js', 'app/**/*.js', 'lib/**/*.js', 'test/**/*.js', 'server-config.js', 'server.js']
+          'prod/allFiles.min.js' : ['public/**/*.js', 'app/**/*.js', 'lib/*.js', 'server-config.js', 'server.js']
         }
       }
     },
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
     'jshint'
   ]);
 
-  grunt.registerTask('build', ['nodemon', 'jshint', "watch"]);
+  grunt.registerTask('build', []);
 
   grunt.registerTask('upload', function(n) {
     if(grunt.option('prod')) {
@@ -120,8 +120,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', [
     // add your deploy tasks here
-    "build"]
-  );
+    'concat', 'uglify', 'jshint', "watch"
+  ]);
 
 
 };

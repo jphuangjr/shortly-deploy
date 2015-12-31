@@ -107,7 +107,7 @@ module.exports = function(grunt) {
     'jshint'
   ]);
 
-  grunt.registerTask('build', ['concat', 'uglify']);
+  grunt.registerTask('build', ['concat', 'uglify', 'nodemon']);
 
   grunt.registerTask('upload', function(n) {
     if(grunt.option('prod')) {

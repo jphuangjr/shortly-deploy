@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     concat: {
       options: {separator: ";"},
       dist: {
-        src: ['public/client/app.js', 'public/client/createLinkView.js', 'public/client/link.js', 'public/client/linksView.js', 'public/client/linkView.js', 'public/client/router.js'],
+        src: ['public/client/**/*.js', 'public/lib/**/*.js'],
         dest: 'public/client/allFiles.js'
       } 
     },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     uglify: {
       target: {
         files: {
-          'public/client/allFiles.min.js' : ['public/client/app.js', 'public/client/createLinkView.js', 'public/client/link.js', 'public/client/linksView.js', 'public/client/linkView.js', 'public/client/router.js']
+          'public/client/allFiles.min.js' : ['public/client/**/*.js', 'public/lib/**/*.js']
         }
       }
     },
